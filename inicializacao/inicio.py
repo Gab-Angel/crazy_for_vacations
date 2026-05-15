@@ -185,5 +185,5 @@ def menu():
 
 
 if __name__ == "__main__":
-    # boas_vindas_calourinho()
+    boas_vindas_calourinho()
     menu()

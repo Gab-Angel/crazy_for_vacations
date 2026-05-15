@@ -46,7 +46,7 @@ print("")
 
 def task_01():
     print(">>"* 10)
-    digitar("questão 3 !!!")
+    digitar("questão 1 !!!")
     print(">>"*10)
     print("")            
     print("")        
@@ -55,7 +55,7 @@ def task_01():
     print("")
     print("")
 
-    resposta1 = (input("qua tipo de busca é essa??(todas letras mínusculas):  "))
+    resposta1 = (input("qual tipo de busca é essa??(todas letras mínusculas e em português):  "))
 
     if resposta1 == "gulosa" or resposta1 == "gananciosa":
         digitar(f"muito meu veterano")
@@ -68,7 +68,7 @@ def task_01():
 
 def task_02():
     print(">>"* 10)
-    digitar("questão 4 !!!")
+    digitar("questão 2 !!!")
     print(">>"*10)
     print("")            
     print("")        
@@ -98,7 +98,7 @@ def task_02():
 
 def task_03():
     print(">>"* 10)
-    digitar("questão 1 !!!")
+    digitar("questão 3 !!!")
     print(">>"*10)
     print("")            
     print("")        
@@ -122,7 +122,7 @@ def task_03():
 
 def task_04():
     print(">>"* 10)
-    digitar("questão 2 !!!")
+    digitar("questão 4 !!!")
     print(">>"*10)
     print("")            
     print("")        
@@ -151,7 +151,7 @@ def task_04():
 
 def task_05():
     print(">>"* 10)
-    digitar("questão 3 !!!")
+    digitar("questão 5 !!!")
     print(">>"*10)
     print("")            
     print("")        
@@ -177,9 +177,40 @@ def task_05():
         digitar("só que não kkkkkk ")
 
 
+
+def task_06():
+    print(">>"* 10)
+    digitar("questão 6 !!!")
+    print(">>"*10)
+    print("")            
+    print("")        
+    print("")
+    print("")
+    print("")
+    print("Considere os vetores {u} = (2, m, -1)$ e {v} = (m, 4, 2).\n Para que os vetores {u} e {v} sejam ortogonais (perpendiculares),\n qual deve ser o valor da constante m?:")
+    print("")
+    print("dadas as opções:")
+    print("")
+    print("A) m = 1/3\nB) m = -1/3\nC) m = 3\nD) m = 0\nE) m = 1/2")
+    
+    resposta1 = (input("qual o valor de m?? (a letra MAIUSCULA):  "))
+
+    if resposta1 == "A":
+        digitar(f"essa tava o mel pode dizer")
+        atualizar_tasks('veterano', "task_06", 25)
+        atualizar_score("veterano", 25)
+        digitar("parabéns + 25 pontos")
+    else:
+        print("tente dnv.....")
+        time.sleep(3)
+        digitar("só que não kkkkkk ")
+
+
+
 if __name__ =="__main__":
     task_01()
     task_02()
     task_03()
     task_04()
     task_05()
+    task_06()

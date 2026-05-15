@@ -1,5 +1,5 @@
 from crud.crud import atualizar_tasks, atualizar_score
-
+from random import shuffle
 
 #começaremos por cáculo
 
@@ -53,9 +53,9 @@ def task_01():
 
         if resposta == 25:
             digitar(f"very good ")
-            atualizar_tasks('calourinho', "task_01", 10)
-            atualizar_score("calourinho", 10)
-            digitar("parabéns + 10 pontos")
+            atualizar_tasks('calourinho', "task_01", 20)
+            atualizar_score("calourinho", 20)
+            digitar("parabéns + 20 pontos")
             break
         else:
             digitar("errou feio painho")
@@ -73,13 +73,13 @@ def task_02():
     print("\nx² -x - 12 ")
     print("")
     while True:
-        resposta2 = float(input("sua resposta: "))
+        resposta2 = (input("sua resposta: "))
 
-        if resposta2 == -3.4:
+        if resposta2 == "-3,4" or resposta2 == "4,-3":
             digitar(f"muito bem zequinha,continue assim !!!")
-            atualizar_tasks('calourinho', "task_02", 20)
-            atualizar_score("calourinho", 20)
-            digitar("parabéns + 20 pontos")
+            atualizar_tasks('calourinho', "task_02", 25)
+            atualizar_score("calourinho", 25)
+            digitar("parabéns + 25 pontos")
             break
         else:
             digitar("não foi dessa fez meu peixe")
@@ -101,9 +101,9 @@ def task_03():
 
         if resposta3 == "1,7":
             digitar(f"muito bem zequinha,continue assim !!!")
-            atualizar_tasks('calourinho', "task_03", 15)
-            atualizar_score("calourinho", 15)
-            digitar("parabéns + 15 pontos")
+            atualizar_tasks('calourinho', "task_03", 25)
+            atualizar_score("calourinho", 25)
+            digitar("parabéns + 25 pontos")
             break
         else:
             digitar("não foi dessa fez meu peixe")
@@ -125,9 +125,9 @@ def task_04():
 
         if resposta3 == 2:
             digitar(f"muito bem zequinha,continue assim !!!")
-            atualizar_tasks('calourinho', "task_04", 25)
-            atualizar_score("calourinho", 25)
-            digitar("parabéns + 25 pontos")
+            atualizar_tasks('calourinho', "task_04", 30)
+            atualizar_score("calourinho", 30)
+            digitar("parabéns + 30 pontos")
             break
         else:
             digitar("não foi dessa fez meu peixe")
@@ -143,7 +143,7 @@ def task_04():
 
 def task_05():
     print(">>"* 10)
-    digitar("questão 1 !!!")
+    digitar("questão 5 !!!")
     print(">>"*10)
     print("")            
     print("")        
@@ -157,9 +157,9 @@ def task_05():
 
         if resposta4 == "falsa":
             digitar(f"infelizmente o cara não pode ter tudo na vida")
-            atualizar_tasks('calourinho', "task_05", 15)
-            atualizar_score("calourinho", 15)
-            digitar("parabéns + 15 pontos")
+            atualizar_tasks('calourinho', "task_05", 20)
+            atualizar_score("calourinho", 20)
+            digitar("parabéns + 20 pontos")
             break
         else:
             digitar("queria que fosse verdade...")
@@ -168,7 +168,7 @@ def task_05():
 
 def task_06():
     print(">>"* 10)
-    digitar("questão 2 !!!")
+    digitar("questão 6 !!!")
     print(">>"*10)
     print("")            
     print("")        
@@ -194,7 +194,7 @@ def task_06():
 
 def task_07():
     print(">>"* 10)
-    digitar("questão 3 !!!")
+    digitar("questão 7 !!!")
     print(">>"*10)
     print("")            
     print("")        
@@ -221,7 +221,7 @@ def task_07():
 
 def task_08():
     print(">>"* 10)
-    digitar("questão 4 !!!")
+    digitar("questão 8 !!!")
     print(">>"*10)
     print("")            
     print("")        
@@ -238,9 +238,9 @@ def task_08():
 
         if resposta7 == "falsa":
             digitar(f"muito good tirou onda aqui")
-            atualizar_tasks('calourinho', "task_08", 70)
-            atualizar_score("calourinho", 70)
-            digitar("parabéns + 70 pontos")
+            atualizar_tasks('calourinho', "task_08", 30)
+            atualizar_score("calourinho", 30)
+            digitar("parabéns + 30 pontos")
             break
         else:
             digitar("aconteçe com as melhores famílias chicão ")
@@ -248,16 +248,17 @@ def task_08():
 
     # tasks de fundamentos da IA
 
+   
+
+def task_09():
     digitar(">>"*10)
     print("fundamentos da IA")
     digitar(">>"*10)
     print("")
     print("")
     print("")
-
-def task_09():
     print(">>"* 10)
-    digitar("questão 1 !!!")
+    digitar("questão 9 !!!")
     print(">>"*10)
     print("")            
     print("")        
@@ -268,9 +269,9 @@ def task_09():
 
         if resposta7 == "atuadores":
             digitar(f"muito bem calorinho")
-            atualizar_tasks('calourinho', "task_09", 20)
-            atualizar_score("calourinho", 20)
-            digitar("parabéns + 20 pontos")
+            atualizar_tasks('calourinho', "task_09", 25)
+            atualizar_score("calourinho", 25)
+            digitar("parabéns + 25 pontos")
             break
         else:
             digitar("vamos, você consegue ")
@@ -280,7 +281,7 @@ def task_09():
 
 def task_10():
     print(">>"* 10)
-    digitar("questão 2 !!!")
+    digitar("questão 10 !!!")
     print(">>"*10)
     print("")            
     print("")        
@@ -294,23 +295,19 @@ def task_10():
 
         if resposta7 == "função_do_agente":
             digitar(f"muito bem calorinho")
-            atualizar_tasks('calourinho', "task_10", 20)
-            atualizar_score("calourinho", 20)
-            digitar("parabéns + 20 pontos")
+            atualizar_tasks('calourinho', "task_10", 25)
+            atualizar_score("calourinho", 25)
+            digitar("parabéns + 25 pontos")
             break
         else:
             digitar("vamos, você consegue ")
             digitar("tente novamente: ")        
 
+
+
 if __name__ =="__main__":
-    task_01()
-    task_02()
-    task_03() 
-    task_04() 
-    task_05() 
-    task_06() 
-    task_07() 
-    task_08() 
-    task_09() 
-    task_10()
+    aleatorio = [task_01,task_02,task_03, task_04, task_05, task_06, task_07, task_08, task_09, task_10 ]
+    shuffle(aleatorio) 
+    for comando in aleatorio:
+        comando ()
          

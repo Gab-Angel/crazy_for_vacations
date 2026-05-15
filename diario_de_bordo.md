@@ -31,7 +31,11 @@
 2. editar nota
 3. listar notas
 4. ver conteído da nota
-
+- atualizei todas as tesks:
+1. garanti isonomia nas questões
+2. randomizaei o as questões
+3. corrigir uma patente no arquivo crud
+4. adicionei mais uma task no nivel veterano
 # horas_trabalhadas: 
 
 14 horas

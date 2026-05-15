@@ -11,6 +11,7 @@ def criar_user(nome: str):
     "score": {
         "calourinho": 0,
         "veterano": 0,
+        "senior": 0,
         "mestre": 0,
         "chefe_do_departamento": 0,
         "reitor": 0,
@@ -80,7 +81,12 @@ def criar_user(nome: str):
             "task_05": {
                 "score": 0,
                 "completed": False
+            },
+            "task_06": {
+                "score": 0,
+                "completed": False
             }
+
         },
         "senior": {
             "task_01": {
