@@ -1,5 +1,5 @@
 from crud.crud import criar_user, pegar_dados
-from anotacoes.notes import nova_nota, editar_nota, listar_notas, ver_conteudo
+from anotacoes.notes import nova_nota, editar_nota, listar_notas, ver_conteudo, deletar_nota
 
 
 #inicialização
@@ -125,7 +125,8 @@ def anotacoes():
         2 - Listar notas
         3 - Editar nota
         4 - Ver conteudo da nota
-        5 - Sair
+        5 - Deletar nota
+        6 - Sair
     ''', 0.01)
         
         choice = input('Escolha: ')
@@ -139,14 +140,15 @@ def anotacoes():
             listar_notas()
 
         elif choice == '3':
-            nome = input('Nome da nota que deseja editar: ')
-            conteudo = input('O que voce deseja anotar: ')
-            editar_nota(nome, conteudo)
+            editar_nota()
 
         elif choice == '4':
-            ver_conteudo(input('Nome da nota que deseja ver o conteúdo: '))
+            ver_conteudo()
         
         elif choice == '5':
+            deletar_nota()
+        
+        elif choice == '6':
             break
 
 
