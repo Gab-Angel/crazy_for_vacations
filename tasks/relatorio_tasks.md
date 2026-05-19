@@ -25,7 +25,7 @@
        *20 TASKS PARA NÍVEL
        (F): PERCA DE PONTOS NO ERRO
        VALOR TOTAL: 
-       VALOR NECESSÁRIO: 
+       VALOR NECESSÁRIO: 1100 
 
        ========================== NIVEL CHEFE DE DEPARTAMENTO ===============================
        X ¬ 2 TASKS DE CÁLCULO

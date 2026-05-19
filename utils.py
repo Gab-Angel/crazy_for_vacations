@@ -14,7 +14,7 @@ def verificar_score():
     score_atual = dados['score'][nivel]
 
     p_calourinho = 200
-    p_veterano = 400
+    p_veterano = 500
     p_mestre = 600
     p_doutor = 800
     p_chefe_dp = 1000

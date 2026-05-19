@@ -94,6 +94,13 @@ Jorge:
 - correção de bugs
 - eliminação de código desnecessário: função digitar2 deletada
 
+
+# dia 19/05
+Jorge:
+- 20 feitas com 11 vazias
+- score da nivel mestre 1100 para subir de level
+- pequenas correções
+
 # horas_trabalhadas: 
 
 28 horas

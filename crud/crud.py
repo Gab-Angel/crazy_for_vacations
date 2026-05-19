@@ -145,7 +145,66 @@ def criar_user(nome: str):
             "task_05": {
                 "score": 0,
                 "completed": False
-            }
+            },
+            "task_06": {
+                "score": 0,
+                "completed": False
+            },
+            "task_07": {
+                "score": 0,
+                "completed": False
+            },
+            "task_08": {
+                "score": 0,
+                "completed": False
+            },
+            "task_09": {
+                "score": 0,
+                "completed": False
+            },
+            "task_10": {
+                "score": 0,
+                "completed": False
+            },
+            "task_11": {
+                "score": 0,
+                "completed": False
+            },
+            "task_12": {
+                "score": 0,
+                "completed": False
+            },
+            "task_13": {
+                "score": 0,
+                "completed": False
+            },
+            "task_14": {
+                "score": 0,
+                "completed": False
+            },
+            "task_15": {
+                "score": 0,
+                "completed": False
+            },
+            "task_16": {
+                "score": 0,
+                "completed": False
+            },
+            "task_17": {
+                "score": 0,
+                "completed": False
+            },
+            "task_18": {
+                "score": 0,
+                "completed": False
+            },
+            "task_19": {
+                "score": 0,
+                "completed": False
+            },
+            "task_20": {
+                "score": 0,
+                "completed": False
         },
         "chefe_do_departamento":{
             "task_01": {

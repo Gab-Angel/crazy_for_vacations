@@ -140,8 +140,423 @@ def task_05():
         colorired("você perdeu 25 pontos!!")
 
 
+def task_06():
+    print(">>"* 10)
+    digitar("questão 6 !!!")
+    print(">>"*10)
+    print("")            
+    digitar("lembre-se quando você errar perderá pontos!!")        
+    print("")
+    print("")
+    print("Dois vetores, {A} e {B}, partem da mesma origem e formam entre si um ângulo de 60°\n. Sabendo que o módulo de {A} é 5 unidades e o módulo de {B} é 8 unidades, determine:")
+    print("")
+    print("")
+    print("O módulo do vetor diferença {D} = {A} - {B}")
 
-tasks_mestre = [task_01,task_02,task_03, task_04, task_05 ]
+    resposta1 = int(input("sua resposta: "))
+
+    if resposta1 == 7:
+        digitar(f"não esperava meus mestres skywalker")
+        atualizar_tasks('mestre', "task_06", 30)
+        atualizar_score("mestre", 30)
+        colorirgreen("parabéns + 30 pontos")
+    else:
+        print("essa tava sal mesmo ")
+        atualizar_tasks('mestre', "task_06", -25)
+        atualizar_score("mestre", -25)
+        colorired("você perdeu 25 pontos!!")
+
+
+def task_07():
+    print(">>"* 10)
+    digitar("questão 7 !!!")
+    print(">>"*10)
+    print("")            
+    digitar("lembre-se quando você errar perderá pontos!!")        
+    print("")
+    print("")
+    print("Sejam os vetores {u} = 2{i} + 3{j} -{k} e {v} = {i} - {j} + 2{k}\n representados em um sistema de coordenadas cartesianas.")
+    print("")
+    print("")
+    print("Calcule o produto escalar {u} * {v}")
+
+    resposta1 = int(input("sua resposta: "))
+
+    if resposta1 == -3:
+        digitar(f"não esperava meus mestres skywalker")
+        atualizar_tasks('mestre', "task_07", 30)
+        atualizar_score("mestre", 30)
+        colorirgreen("parabéns + 30 pontos")
+    else:
+        print("essa tava sal mesmo ")
+        atualizar_tasks('mestre', "task_07", -25)
+        atualizar_score("mestre", -25)
+        colorired("você perdeu 25 pontos!!")
+
+
+
+def task_08():
+    print(">>"* 10)
+    digitar("questão 8 !!!")
+    print(">>"*10)
+    print("")            
+    digitar("lembre-se quando você errar perderá pontos!!")        
+    print("")
+    print("")
+    print("Dados os pontos A(1, 2), B(4, 6) e C(x, 10) no plano cartesiano:")
+    print("")
+    print("")
+    print("Sabendo que o vetor {AC} é ortogonal (perpendicular) ao vetor {AB},\n encontre o valor da coordenada x do ponto C")
+
+    resposta1 = int(input("sua resposta: "))
+
+    if resposta1 == -29/3:
+        digitar(f"não esperava meus mestres skywalker")
+        atualizar_tasks('mestre', "task_08", 30)
+        atualizar_score("mestre", 30)
+        colorirgreen("parabéns + 30 pontos")
+    else:
+        print("essa tava sal mesmo ")
+        atualizar_tasks('mestre', "task_08", -25)
+        atualizar_score("mestre", -25)
+        colorired("você perdeu 25 pontos!!")
+
+
+def task_09():
+    print(">>"* 10)
+    digitar("questão 9 !!!")
+    print(">>"*10)
+    print("")            
+    digitar("lembre-se quando você errar perderá pontos!!")        
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+
+    resposta1 = int(input("sua resposta: "))
+
+    if resposta1 == :
+        digitar(f"não esperava meus mestres skywalker")
+        atualizar_tasks('mestre', "task_09", 30)
+        atualizar_score("mestre", 30)
+        colorirgreen("parabéns + 30 pontos")
+    else:
+        print("essa tava sal mesmo ")
+        atualizar_tasks('mestre', "task_09", -25)
+        atualizar_score("mestre", -25)
+        colorired("você perdeu 25 pontos!!")
+
+
+
+def task_10():
+    print(">>"* 10)
+    digitar("questão 10 !!!")
+    print(">>"*10)
+    print("")            
+    digitar("lembre-se quando você errar perderá pontos!!")        
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+
+    resposta1 = int(input("sua resposta: "))
+
+    if resposta1 == :
+        digitar(f"não esperava meus mestres skywalker")
+        atualizar_tasks('mestre', "task_10", 30)
+        atualizar_score("mestre", 30)
+        colorirgreen("parabéns + 30 pontos")
+    else:
+        print("essa tava sal mesmo ")
+        atualizar_tasks('mestre', "task_10", -25)
+        atualizar_score("mestre", -25)
+        colorired("você perdeu 25 pontos!!")
+
+
+
+def task_11():
+    print(">>"* 10)
+    digitar("questão 11 !!!")
+    print(">>"*10)
+    print("")            
+    digitar("lembre-se quando você errar perderá pontos!!")        
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+
+    resposta1 = int(input("sua resposta: "))
+
+    if resposta1 == :
+        digitar(f"não esperava meus mestres skywalker")
+        atualizar_tasks('mestre', "task_11", 30)
+        atualizar_score("mestre", 30)
+        colorirgreen("parabéns + 30 pontos")
+    else:
+        print("essa tava sal mesmo ")
+        atualizar_tasks('mestre', "task_11", -25)
+        atualizar_score("mestre", -25)
+        colorired("você perdeu 25 pontos!!")
+
+
+
+def task_12():
+    print(">>"* 10)
+    digitar("questão 12 !!!")
+    print(">>"*10)
+    print("")            
+    digitar("lembre-se quando você errar perderá pontos!!")        
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+
+    resposta1 = int(input("sua resposta: "))
+
+    if resposta1 == :
+        digitar(f"não esperava meus mestres skywalker")
+        atualizar_tasks('mestre', "task_12", 30)
+        atualizar_score("mestre", 30)
+        colorirgreen("parabéns + 30 pontos")
+    else:
+        print("essa tava sal mesmo ")
+        atualizar_tasks('mestre', "task_12", -25)
+        atualizar_score("mestre", -25)
+        colorired("você perdeu 25 pontos!!")
+
+
+def task_13():
+    print(">>"* 10)
+    digitar("questão 13 !!!")
+    print(">>"*10)
+    print("")            
+    digitar("lembre-se quando você errar perderá pontos!!")        
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+
+    resposta1 = int(input("sua resposta: "))
+
+    if resposta1 == :
+        digitar(f"não esperava meus mestres skywalker")
+        atualizar_tasks('mestre', "task_13", 30)
+        atualizar_score("mestre", 30)
+        colorirgreen("parabéns + 30 pontos")
+    else:
+        print("essa tava sal mesmo ")
+        atualizar_tasks('mestre', "task_13", -25)
+        atualizar_score("mestre", -25)
+        colorired("você perdeu 25 pontos!!")
+
+
+
+def task_14():
+    print(">>"* 10)
+    digitar("questão 14 !!!")
+    print(">>"*10)
+    print("")            
+    digitar("lembre-se quando você errar perderá pontos!!")        
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+
+    resposta1 = int(input("sua resposta: "))
+
+    if resposta1 == :
+        digitar(f"não esperava meus mestres skywalker")
+        atualizar_tasks('mestre', "task_14", 30)
+        atualizar_score("mestre", 30)
+        colorirgreen("parabéns + 30 pontos")
+    else:
+        print("essa tava sal mesmo ")
+        atualizar_tasks('mestre', "task_14", -25)
+        atualizar_score("mestre", -25)
+        colorired("você perdeu 25 pontos!!")
+
+
+
+def task_15():
+    print(">>"* 10)
+    digitar("questão 15 !!!")
+    print(">>"*10)
+    print("")            
+    digitar("lembre-se quando você errar perderá pontos!!")        
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+
+    resposta1 = int(input("sua resposta: "))
+
+    if resposta1 == :
+        digitar(f"não esperava meus mestres skywalker")
+        atualizar_tasks('mestre', "task_15", 30)
+        atualizar_score("mestre", 30)
+        colorirgreen("parabéns + 30 pontos")
+    else:
+        print("essa tava sal mesmo ")
+        atualizar_tasks('mestre', "task_15", -25)
+        atualizar_score("mestre", -25)
+        colorired("você perdeu 25 pontos!!")
+
+
+
+def task_16():
+    print(">>"* 10)
+    digitar("questão 16 !!!")
+    print(">>"*10)
+    print("")            
+    digitar("lembre-se quando você errar perderá pontos!!")        
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+
+    resposta1 = int(input("sua resposta: "))
+
+    if resposta1 == :
+        digitar(f"não esperava meus mestres skywalker")
+        atualizar_tasks('mestre', "task_16", 30)
+        atualizar_score("mestre", 30)
+        colorirgreen("parabéns + 30 pontos")
+    else:
+        print("essa tava sal mesmo ")
+        atualizar_tasks('mestre', "task_16", -25)
+        atualizar_score("mestre", -25)
+        colorired("você perdeu 25 pontos!!")
+
+
+def task_17():
+    print(">>"* 10)
+    digitar("questão 17 !!!")
+    print(">>"*10)
+    print("")            
+    digitar("lembre-se quando você errar perderá pontos!!")        
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+
+    resposta1 = int(input("sua resposta: "))
+
+    if resposta1 == :
+        digitar(f"não esperava meus mestres skywalker")
+        atualizar_tasks('mestre', "task_17", 30)
+        atualizar_score("mestre", 30)
+        colorirgreen("parabéns + 30 pontos")
+    else:
+        print("essa tava sal mesmo ")
+        atualizar_tasks('mestre', "task_17", -25)
+        atualizar_score("mestre", -25)
+        colorired("você perdeu 25 pontos!!")
+
+
+def task_18():
+    print(">>"* 10)
+    digitar("questão 18 !!!")
+    print(">>"*10)
+    print("")            
+    digitar("lembre-se quando você errar perderá pontos!!")        
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+
+    resposta1 = int(input("sua resposta: "))
+
+    if resposta1 == :
+        digitar(f"não esperava meus mestres skywalker")
+        atualizar_tasks('mestre', "task_18", 30)
+        atualizar_score("mestre", 30)
+        colorirgreen("parabéns + 30 pontos")
+    else:
+        print("essa tava sal mesmo ")
+        atualizar_tasks('mestre', "task_18", -25)
+        atualizar_score("mestre", -25)
+        colorired("você perdeu 25 pontos!!")
+
+
+def task_19():
+    print(">>"* 10)
+    digitar("questão 19 !!!")
+    print(">>"*10)
+    print("")            
+    digitar("lembre-se quando você errar perderá pontos!!")        
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+
+    resposta1 = int(input("sua resposta: "))
+
+    if resposta1 == :
+        digitar(f"não esperava meus mestres skywalker")
+        atualizar_tasks('mestre', "task_19", 30)
+        atualizar_score("mestre", 30)
+        colorirgreen("parabéns + 30 pontos")
+    else:
+        print("essa tava sal mesmo ")
+        atualizar_tasks('mestre', "task_19", -25)
+        atualizar_score("mestre", -25)
+        colorired("você perdeu 25 pontos!!")
+
+
+def task_20():
+    print(">>"* 10)
+    digitar("questão 20 !!!")
+    print(">>"*10)
+    print("")            
+    digitar("lembre-se quando você errar perderá pontos!!")        
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+
+    resposta1 = int(input("sua resposta: "))
+
+    if resposta1 == :
+        digitar(f"não esperava meus mestres skywalker")
+        atualizar_tasks('mestre', "task_20", 30)
+        atualizar_score("mestre", 30)
+        colorirgreen("parabéns + 30 pontos")
+    else:
+        print("essa tava sal mesmo ")
+        atualizar_tasks('mestre', "task_20", -25)
+        atualizar_score("mestre", -25)
+        colorired("você perdeu 25 pontos!!")
+
+
+
+tasks_mestre = [task_01,task_02,task_03, task_04, task_05,   
+    task_06, task_07, task_08, task_09, task_10,task_11, 
+    task_12, task_13, task_14, task_15, task_16, task_17, 
+    task_18, task_19, task_20]
 
 
 
