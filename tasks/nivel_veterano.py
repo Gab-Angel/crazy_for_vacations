@@ -297,7 +297,7 @@ def task_11():
     
     resposta1 = (input("sua resposta:  ")).upper()
 
-    if resposta1 == "VERDADEIRA:
+    if resposta1 == "VERDADEIRA":
         digitar(f"boa chico da costa  uau tu tu tu sarru!!")
         atualizar_tasks('veterano', "task_11", 30)
         atualizar_score("veterano", 30)
@@ -403,7 +403,7 @@ def task_15():
     resposta1 = (input("qual o valor de p: "))
     resposta2 = input(("qual o valor de r: "))
 
-    if resposta1 == 'indeterminada' and 'falsa'
+    if resposta1 == 'indeterminada' and 'falsa':
         digitar(f"boa chico da costa  uau tu tu tu sarru!!")
         atualizar_tasks('veterano', "task_15", 35)
         atualizar_score("veterano", 35)
