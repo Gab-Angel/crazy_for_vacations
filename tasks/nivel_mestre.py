@@ -505,7 +505,7 @@ def task_19():
     print("")            
     digitar("lembre-se quando você errar perderá pontos!!")        
     print("")
-    print("")
+    print(" ")
     print("")
     print("")
     print("")
