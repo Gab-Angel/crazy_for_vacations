@@ -101,6 +101,16 @@ Jorge:
 - score da nivel mestre 1100 para subir de level
 - pequenas correções
 
+
+# dia 20/05 
+Jorge:
+- 20 tasks do nivel mestre concluidas
+- garanti a rígidez do nível_mestre deixando as questões equitativas
+- grade de possibilidades 2% de chance de passar com 9 tasks
+- por padrão 13,14 questões seguidas (só os fortes sobrevivem)
+Angel:
+- criou a blazer dentro do cfv só falta o conteúdo agora
+
 # horas_trabalhadas: 
 
-28 horas
+32 horas
