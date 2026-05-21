@@ -1,8 +1,8 @@
-from crud.crud import atualizar_tasks, atualizar_score
+from crud.crud import atualizar_tasks, atualizar_score, atualizar_bets
 from utils import digitar
 import time
 
-from cores import colorirgreen, colorired
+from cores import colorirgreen, colorired, colorirpurple
 #começaremos por cáculo
 
 
@@ -46,6 +46,8 @@ def task_02():
         atualizar_tasks('veterano', "task_02", 25)
         atualizar_score("veterano", 25)
         colorirgreen("parabéns + 25 pontos")
+        atualizar_bets(2)
+        colorirpurple('Dia de sorte! Você ganhou 2 bets!!!')
     else:
         print("tente dnv.....")
         time.sleep(3)
@@ -76,6 +78,8 @@ def task_03():
         atualizar_tasks('veterano', "task_03", 20)
         atualizar_score("veterano", 20)
         colorirgreen("parabéns + 20 pontos")
+        atualizar_bets(2)
+        colorirpurple('Dia de sorte! Você ganhou 2 bets!!!')
     else:
         print("tente dnv.....")
         time.sleep(3)
@@ -190,6 +194,8 @@ def task_07():
         atualizar_tasks('veterano', "task_07", 25)
         atualizar_score("veterano", 25)
         colorirgreen("parabéns + 25 pontos")
+        atualizar_bets(3)
+        colorirpurple('Dia de sorte! Você ganhou 3 bets!!!')
     else:
         print("tente dnv.....")
         time.sleep(3)
@@ -329,6 +335,8 @@ def task_12():
         atualizar_tasks('veterano', "task_12", 30)
         atualizar_score("veterano", 30)
         colorirgreen("parabéns + 30 pontos")
+        atualizar_bets(9)
+        colorirpurple('Dia de sorte! Você ganhou 9 bets!!!')
     else:
         print("tente dnv.....")
         time.sleep(3)
@@ -404,11 +412,13 @@ def task_15():
     resposta1 = (input("qual o valor de p: "))
     resposta2 = input(("qual o valor de r: "))
 
-    if resposta1 == 'indeterminada' and resposta1 == 'falsa':
+    if resposta1 == 'indeterminada' and resposta2 == 'falsa':
         digitar(f"boa chico da costa  uau tu tu tu sarru!!")
         atualizar_tasks('veterano', "task_15", 35)
         atualizar_score("veterano", 35)
         colorirgreen("parabéns + 35 pontos")
+        atualizar_bets(2)
+        colorirpurple('Dia de sorte! Você ganhou 2 bets!!!')
     else:
         print("tente dnv.....")
         time.sleep(3)

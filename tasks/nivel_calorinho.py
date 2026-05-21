@@ -1,6 +1,7 @@
-from crud.crud import atualizar_tasks, atualizar_score
+from crud.crud import atualizar_tasks, atualizar_score, atualizar_bets
 from utils import digitar
 import time
+from cores import colorired
 
 
 def task_01():
@@ -124,6 +125,8 @@ def task_05():
             atualizar_tasks('calourinho', "task_05", 20)
             atualizar_score("calourinho", 20)
             digitar("\033[32mparabéns + 20 pontos\033[m")
+            atualizar_bets(2)
+            colorired('Dia de sorte! Você ganhou 2 bets!!!')
             break
         else:
             digitar("queria que fosse verdade...")
@@ -176,6 +179,8 @@ def task_07():
             atualizar_tasks('calourinho', "task_07", 25)
             atualizar_score("calourinho", 25)
             digitar("\033[32mparabéns + 25 pontos\033[m")
+            atualizar_bets(5)
+            colorired('Dia de sorte! Você ganhou 5 bets!!!')
             break
         else:
             digitar("não foi dessa vez chicão")
@@ -262,6 +267,8 @@ def task_10():
             atualizar_tasks('calourinho', "task_10", 25)
             atualizar_score("calourinho", 25)
             digitar("\033[32mparabéns + 25 pontos\033[m")
+            atualizar_bets(2)
+            colorired('Dia de sorte! Você ganhou 2 bets!!!')
             break
         else:
             digitar("vamos, você consegue ")

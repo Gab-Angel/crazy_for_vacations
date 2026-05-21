@@ -6,7 +6,7 @@ file = Path("crud/user.json")
 def criar_user(nome: str):
 
     initial_data = {
-        "nick_name": "bot",
+    "nick_name": "bot",
     "level": "calourinho",
     "score": {
         "calourinho": 0,
@@ -16,6 +16,7 @@ def criar_user(nome: str):
         "chefe_do_departamento": 0,
         "reitor": 0,
     },
+    'bets': 0,
     "tasks": {
         "calourinho": {
             "task_01": {
@@ -252,6 +253,8 @@ def criar_user(nome: str):
         }
     }
     }
+    }
+
 
     if file.is_file():
         ...
@@ -328,7 +331,14 @@ def pegar_dados():
         print(f'Erro ao buscar dados')
 
 
+def atualizar_bets(jogadas: int):
+    with open(file, 'r') as f:
+        dados = json.load(f)
 
+    dados['bets'] += jogadas
+
+    with open(file, 'w') as f:
+        json.dump(dados, f, indent=4)
 
 
 if __name__ == "__main__":

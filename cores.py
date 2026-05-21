@@ -1,13 +1,4 @@
-
-import time
-import sys
-import os
-
-def digitar(texto, velocidade=0.01):
-    for caractere in texto:
-        print(caractere, end='', flush=True)
-        time.sleep(velocidade)
-    print()
+from utils import digitar
 
 
 

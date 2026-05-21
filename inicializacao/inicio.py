@@ -3,7 +3,8 @@ from anotacoes.notes import nova_nota, editar_nota, listar_notas, ver_conteudo, 
 from tasks.task import consultar_tasks, fazer_tasks
 from utils import digitar
 from cores import colorirciano
-#inicialização 
+from apostas.apostas import trocar_pontos, apostar, sobre
+#inicialização from
 
 import time
 
@@ -35,7 +36,7 @@ def boas_vindas_calourinho():
         MAAAAASSSS
         SEM ENROLAÇÃO... AVANTE CALOURO!!!
         """
-        , 0.05)   
+        , 0.01)   
     
     nome_player = input("Primeiro quero saber qual seu nickname:  ")
     criar_user(nome_player)
@@ -167,7 +168,24 @@ def task():
         elif choice == '3':
             break
 
+def bets():
+    while True:
+        digitar("""
+        1 - Trocar pontos em jogadas
+        2 - Apostar
+        3 - Sobre
+        4 - Sair
+""")
+        choice = input('O que você deseja: ')
 
+        if choice == '1':
+            trocar_pontos()
+        elif choice == '2':
+            apostar()
+        elif choice == '3':
+            sobre()
+        elif choice == '4':
+            break
 
 def menu():
     while True:
@@ -178,7 +196,8 @@ def menu():
         1 - Tasks
         2 - Consultar dados
         3 - Fazer anotações
-        4 - Sair
+        4 - Bets
+        5 - Sair
     ''', 0.01)
 
         choice = input('Escolha: ')
@@ -195,8 +214,11 @@ def menu():
         elif choice == '3':
             anotacoes()
 
-
         elif choice == '4':
+            bets()
+
+
+        elif choice == '5':
             digitar('Saindo')
             time.sleep(1)
             break

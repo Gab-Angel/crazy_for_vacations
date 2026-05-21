@@ -108,9 +108,17 @@ Jorge:
 - garanti a rígidez do nível_mestre deixando as questões equitativas
 - grade de possibilidades 2% de chance de passar com 9 tasks
 - por padrão 13,14 questões seguidas (só os fortes sobrevivem)
+
 Angel:
 - criou a blazer dentro do cfv só falta o conteúdo agora
+- criado as bets:
+1. função de apostar no menu
+2. função de trocar pontos em bets
+3. função 'sobre'
+4. crud: função atualizar_bets
+5. otimização das cores
+6. logica de ganhar bets nas tasks
 
 # horas_trabalhadas: 
 
-32 horas
+34 horas
