@@ -19,12 +19,12 @@
 
        ========================== NIVEL MESTRE ===============================
        ¬ 5 TASKS DE CÁLCULO
-       X ¬ 5 TASKS DE VETORES
+       X ¬ 6 TASKS DE VETORES
        X ¬ 5 TASKS DE PA
-       X ¬ 5 TASKS DE FIA
+       X ¬ 4 TASKS DE FIA
        *20 TASKS PARA NÍVEL
        (F): PERCA DE PONTOS NO ERRO
-       VALOR TOTAL: 
+       VALOR TOTAL: 1340
        VALOR NECESSÁRIO: 1100 
 
        ========================== NIVEL CHEFE DE DEPARTAMENTO ===============================
