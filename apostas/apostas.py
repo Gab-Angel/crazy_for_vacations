@@ -1,5 +1,6 @@
 from crud.crud import pegar_dados, atualizar_score, atualizar_bets
 from utils import  digitar
+import random
 
 def trocar_pontos():
     dados = pegar_dados()

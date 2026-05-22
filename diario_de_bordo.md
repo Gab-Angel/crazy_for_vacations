@@ -119,6 +119,22 @@ Angel:
 5. otimização das cores
 6. logica de ganhar bets nas tasks
 
+# dia 21/05
+
+Jorge:
+- apresentou para o novo integrante Gabriel suas resonsabilidades
+- discutiu com Angel o futuro do CFV
+
+Angel:
+- observou Jorge apresentar a Gabriel suas responsabilidades
+- discutiu com Jorge o futuro do CFV
+- pasta lore criada
+
+Gabriel:
+=================   INGRESSOU NO PROJETO!!!   ================================
+criou o guia: 
+responsável por ser um guia da historia, ou guia que ensinar os recursos do game
+
 # horas_trabalhadas: 
 
-34 horas
+37 horas
