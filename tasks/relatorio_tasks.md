@@ -1,4 +1,4 @@
-       ========================== NIVEL CALORINHO ===============================
+       ========================== NIVEL CALORINHO===============================
        ¬ 4 TASKS DE CÁLCULO
        ¬ 4 TASKS DE FEM
        ¬ 2 TASKS DE FIA

@@ -5,9 +5,6 @@ from cores import colorired
 
 
 def task_01():
-    digitar("\033[1;33;44mvamos dar início a nossa aventura, sua missão começa pelo mundo dos cáculos\033[m]")
-    digitar("\033[1;33;44mlembrando que antes de chegar no mundo dos limites precisamos testa nossa matématica elementar\033[m]")
-    print("")
     print("")
     digitar("\n resolva: ")
     print("\n (5)²³\n -----\n (5)²¹")
@@ -20,7 +17,7 @@ def task_01():
             digitar(f"very good ")
             atualizar_tasks('calourinho', "task_01", 20)
             atualizar_score("calourinho", 20)
-            digitar("\033[32mparabéns + 20 pontos\033[m")
+            colorirgreen("parabéns + 20 pontos")
             break
         else:
             digitar("errou feio painho")
@@ -275,9 +272,6 @@ def task_10():
             digitar("tente novamente: ")        
 
 
-tasks_calourinho = [task_01,task_02,task_03,
-        task_04, task_05, task_06,
-        task_07, task_08, task_09, task_10 ]
 
 
 if __name__ == "__main__":
