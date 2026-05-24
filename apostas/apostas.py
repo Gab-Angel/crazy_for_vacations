@@ -2,6 +2,36 @@ from crud.crud import pegar_dados, atualizar_score, atualizar_bets
 from utils import  digitar
 import random
 
+raridade = {
+    'comum': 50,
+    'raro': 30,
+    'epico': 15,
+    'lendario': 5,
+}
+
+comuns = {
+    'bets': [1, 2, 3, 4, 5, 10, 20],
+    'score': [10, 20, 30, 40, 50, 100, 150, 200, 300],
+    'itens': ['comum1', 'comum2', 'comum3']
+}
+
+raros = {
+    'bets': [5, 7, 9, 10, 20, 50, 100],
+    'score': [50, 60, 70, 80, 90, 100, 150, 200, 300],
+    'itens': ['raro1', 'raro2', 'raro3']
+}
+epicos = {
+    'bets': [5, 7, 9, 10, 20, 50, 100],
+    'score': [50, 60, 70, 80, 90, 100, 150, 200, 300],
+    'itens': ['epico1', 'epico2', 'epico3']
+}
+lendarios = {
+    'bets': [5, 7, 9, 10, 20, 50, 100],
+    'score': [50, 60, 70, 80, 90, 100, 150, 200, 300],
+    'itens': ['Caneta do Reitor', 'Senha da Secretaria', 'Nada']
+}
+
+
 def trocar_pontos():
     dados = pegar_dados()
     bets = dados['bets']
@@ -77,11 +107,6 @@ def trocar_pontos():
 
 
 
-def apostar():
-    ...
-
-
-
 def sobre():
     digitar(f"""
     {'='*100}
@@ -106,3 +131,104 @@ def sobre():
     {'='*100}
 
 """)
+
+
+def premios_bets(categoria: str, premio):
+    ...
+    
+
+def randomBets(bets: int):
+    pesos = raridade.copy()
+
+    luck = 1 + (bets / 100)
+
+    pesos['epico'] *= luck
+    pesos['lendario'] *= luck
+
+    result = random.choices(
+        list(pesos.keys()),
+        weights=list(pesos.values())
+    )
+
+    if result == ['comum']:
+        categoria = random.choice(list(comuns))
+        lista = comuns[categoria]
+        premio = random.choice(lista)
+        premios_bets(categoria, premio)
+
+    elif result == ['raro']:
+        categoria = random.choice(list(raros))
+        lista = raros[categoria]
+        premio = random.choice(lista)
+        premios_bets(categoria, premio)
+
+    elif result == ['epico']:
+        categoria = random.choice(list(epicos))
+        lista = epicos[categoria]
+        premio = random.choice(lista)
+        premios_bets(categoria, premio)
+
+    elif result == ['lendario']:
+        categoria = random.choice(list(lendarios))
+        lista = lendarios[categoria]
+        premio = random.choice(lista)
+        premios_bets(categoria, premio)
+
+    return categoria, premio
+
+
+
+def girar():
+    quant_bets = int(input("Quantas bets você deseja jogar?: "))
+    confirma = input(f"Confirma girar com {quant_bets} bets? s/n: ").lower().strip()
+
+    if confirma == 's':
+        ...
+
+    elif confirma == 'n':
+        ...
+    else:
+        digitar("Valor digitado inválido!")
+
+
+    
+
+
+def ver_odds():
+    ...
+
+
+def apostar():
+    while True: 
+        digitar('''
+    1 - Girar
+    2 - Ver odds
+    3 - Sair
+
+''')
+        
+        choice = input('O que você deseja: ')
+
+        if choice == '1':
+            girar()
+        elif choice == '2':
+            ver_odds()
+        elif choice == 'sair':
+            break
+        else:
+            digitar('Digite uma das opções acima!!!')
+
+    
+
+if __name__ == "__main__":
+    # cont = 0
+    # while True:
+        
+    #     if randomBets(1) == ['lendario']:
+    #         break
+    #     else:
+    #         cont += 1
+    # print(cont)
+
+    premio = randomBets(1)
+    print(premio)
