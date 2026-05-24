@@ -135,6 +135,16 @@ Gabriel:
 criou o guia: 
 responsável por ser um guia da historia, ou guia que ensinar os recursos do game
 
-# horas_trabalhadas: 
+# dia 24/05
+Jorge:
+- Iniciei a lore do nivel calourinho 
+- lore do calouro alternativa
+Angel:
+- apostas criei randombets
+ - definir a raridade das premiações
+ - criei a função girar
+ - inicio a função premiosbets
 
-37 horas
+
+# horas_trabalhadas: 
+40 horas
