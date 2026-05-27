@@ -133,5 +133,27 @@ def create_tables():
             except (Exception, psycopg2.DatabaseError) as error:
                 print(error) 
 
+
+def delete_tables():
+     with connection() as conn:
+        with conn.cursor() as cur:
+            try: 
+                cur.execute("""
+                    TRUNCATE TABLE
+                        user_tasks,
+                        user_levels,
+                        tasks,
+                        users,
+                        levels
+                    RESTART IDENTITY CASCADE;
+                """)
+
+            except (Exception, psycopg2.DatabaseError) as error:
+                print(error)
+
+
+
 if __name__ == "__main__":
-    create_tables()
+    # create_tables()
+    # delete_tables()
+    ...

@@ -145,6 +145,19 @@ Angel:
  - criei a função girar
  - inicio a função premiosbets
 
+# 25/05
+
+Jorge:
+- inseriu as task na tabela tasks
+
+Angel:
+- criou pasta db
+- conn.py
+- crud.py
+- tables.py
+- função de criar tabelas
+- função de deletar tabelas 
+
 
 # horas_trabalhadas: 
-40 horas
+42 horas
