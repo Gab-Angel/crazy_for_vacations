@@ -17,3 +17,6 @@ def connection():
         )
     except:
         print("Erro ao se conectar ao BD")
+
+if __name__ == "__main__":
+    connection()
