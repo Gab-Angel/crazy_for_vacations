@@ -17,7 +17,7 @@ def task_01():
             digitar(f"very good ")
             atualizar_tasks('calourinho', "task_01", 20)
             atualizar_score("calourinho", 20)
-            colorirgreen("parabéns + 20 pontos")
+            digitar("parabéns + 20 pontos")
             break
         else:
             digitar("errou feio painho")

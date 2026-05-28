@@ -159,5 +159,29 @@ Angel:
 - função de deletar tabelas 
 
 
+# 27/ 05
+
+Angel:
+- atualizações no crud:
+1. create_user
+2. update_level
+3. update_score
+4. register_user_tasks
+5. get_data_user
+
+- varias alterações em outras partes do projeto que estavam ultrapassadas
+- rename init_db.py
+
+
+# 28/05
+
+Angel:
+- inicialização atializada:
+1. anotações deletada da lógica do projeto
+2. boas_vindas_calouro atualizada
+
+para fazer:
+1. chamada de tasks
+
 # horas_trabalhadas: 
-42 horas
+46 horas

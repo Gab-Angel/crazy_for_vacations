@@ -1,12 +1,13 @@
 from inicializacao.inicio import boas_vindas_calourinho, menu
 from pathlib import Path
+import os
 
-file = Path('crud/user.json')
+file = Path('session.json')
 
 
 # aqui vai ficar tudo
 def main():
-    if not file.is_file():
+    if not os.path.exists(file):
         boas_vindas_calourinho()
 
     menu()
