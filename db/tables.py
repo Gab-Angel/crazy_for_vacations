@@ -54,7 +54,21 @@ def create_tables():
                         completed BOOLEAN DEFAULT FALSE,
                         completed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
                     );
-
+                            
+                    CREATE TABLE IF NOT EXISTS vaults (
+                        id SERIAL PRIMARY KEY,
+                        achievements_id INT NOT NULL REFERENCES 
+                              
+                    );
+                            
+                    CREATE TABLE IF NOT EXISTS achievements (
+                        id SERIAL PRIMARY KEY,
+                        type INT NOT NULL REFERENCES 
+                        name VARCHAR(35) NOT NULL,
+                        rarity VACHAR(20) CHECK (rarity IN (
+                            'comum', 'raro', 'epico', 'lendario'))
+                        description TEXT
+                    );
 
                     INSERT INTO levels (name, required_score, order_number)
                     VALUES

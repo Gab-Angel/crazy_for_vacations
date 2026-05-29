@@ -56,9 +56,6 @@ def boas_vindas_calourinho():
         raise ('ERRO AO CRIAR SESSION_FILE')
 
 
-
-
-
 def exibir_dados(dados: dict):
     nickname = dados['nick_name']
     level = dados['level_name']

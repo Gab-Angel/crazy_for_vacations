@@ -179,6 +179,7 @@ Angel:
 - inicialização atializada:
 1. anotações deletada da lógica do projeto
 2. boas_vindas_calouro atualizada
+- session.json criado para salvar sessão do player
 
 para fazer:
 1. chamada de tasks
