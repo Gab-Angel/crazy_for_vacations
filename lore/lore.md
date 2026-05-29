@@ -51,6 +51,19 @@ ex:
 
 4. trancar: permite o user ...
 
+
+categorias:
+
+- pontos:
+permite o user alterar o ganho de score de uma determinada task
+
+- pular:
+pula tasks
+
+- bets:
+permite coletar bets
+
+
 ---
 
 - certificados:

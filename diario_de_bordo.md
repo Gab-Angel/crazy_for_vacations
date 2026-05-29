@@ -180,9 +180,17 @@ Angel:
 1. anotações deletada da lógica do projeto
 2. boas_vindas_calouro atualizada
 - session.json criado para salvar sessão do player
+- tabelas criadas:
+1. vaults
+2. achievements
+3. items
+4. bags
 
 para fazer:
 1. chamada de tasks
+2. definir categoria de items utilizaveis
+3. definir achievements
+4. definir items
 
 # horas_trabalhadas: 
 46 horas
