@@ -192,5 +192,12 @@ para fazer:
 3. definir achievements
 4. definir items
 
+Jorge:
+- continuidade na lore
+- primeiro dia feito com sucesso
+- duas ramificações criadas ainda não testadas
+ * numa delas vc chegou cedo e conseguiu ver aula da cálculo
+ * na outra o usuario se perdeu e perdeu a aula de cálculo
+ 
 # horas_trabalhadas: 
-46 horas
+48 horas

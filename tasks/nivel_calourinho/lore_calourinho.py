@@ -2,7 +2,7 @@ from crud.crud import atualizar_tasks, atualizar_score, atualizar_bets
 from utils import digitar
 import time
 from cores import colorired , colorirgreen
-from tasks.nivel_calourinho.nivel_calorinho import task_01
+from tasks.nivel_calourinho.nivel_calorinho import task_01, task_02
 from tasks.nivel_calourinho.lore_calourinho_alternativas import bperdido
 
 print("\033[34m            / \\")
@@ -84,3 +84,45 @@ digitar("voce chegou na sua primeira aula de cáculo A ")
 digitar("haahahahhahhha")
 digitar("a professora Josenaura gilbert passou o primeiro teste de verificação ")
 task_01()
+task_02()
+
+print("\n\n\n\n")
+digitar("sua aula de calculo acabou!!!")
+print('.\n.\n.\n.\n.')
+digitar('agora vamos procurar a sala de de programação A\n')
+digitar('qual did vc vai??\na)did2 \nb)did3\nc)did4\nd)labratório do DCOMP')
+
+while True:
+    resposta = input("sua resposta: ").upper()
+
+    if resposta == 'D':
+        colorirgreen("muito bem calorinho")
+        break
+    elif resposta == 'B':
+        colorired("naoooo")
+    elif resposta == 'C':
+        digitar("naooo")
+    elif responda == 'D':
+        digitar("naaaoooo")
+    else:
+        digitar("digite apenas a,b,c ou d")
+
+digitar("sua primeira aula de programação já começou Doutora mistsubist já faz a pergunta classica:\no que é um algoritmo??")
+digitar("oq voce vai responder??\na)uma serie se rotinas que o usuario toma\nb)é uma receita de bolo\nc)é uma serie de ações para chegar a um objetivo\nd)uma sequencia finita de instruções")
+resposta3 = input("sua resposta: ").upper()
+if resposta3 == 'A':
+    digitar("todas respostas estão certas de certa forma")
+elif resposta3 == 'B':
+    digitar("todas respostas estão certas de certa forma")
+elif resposta3 == 'C':
+    digitar("todas respostas estão certas de certa forma")
+else:
+    digitar("todas respostas estão certas de certa forma")
+print('\n\n\n\n')
+digitar('sua aula de programação terminou\nmas ao chegar perto da sala de fundamentos da IA\n')
+digitar('um email chega no seu smartfone.....')
+time.sleep(1)
+digitar("professor chicharito:\n-nossa aula de hoje foi cancelada")
+digitar("happy happy\n ")
+time.sleep(2)
+digitar('primeiro dia concluido com sucesso')
