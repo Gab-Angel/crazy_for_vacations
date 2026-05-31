@@ -55,20 +55,33 @@ def create_tables():
                         completed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
                     );
                             
-                    CREATE TABLE IF NOT EXISTS vaults (
+                    CREATE TABLE IF NOT EXISTS items (
                         id SERIAL PRIMARY KEY,
-                        achievements_id INT NOT NULL REFERENCES 
-                              
+                        type VARCHAR(30) CHECK (type IN (
+                            'achievements', 'items')),
+                        category VARCHAR(30) NOT NULL,
+                        name VARCHAR(35) NOT NULL,
+                        rarity VARCHAR(20) CHECK (rarity IN (
+                            'comum', 'raro', 'epico', 'lendario')),
+                        amount_uses INT NOT NULL DEFAULT 1, 
+                        description TEXT NOT NULL
                     );
                             
-                    CREATE TABLE IF NOT EXISTS achievements (
+
+                    CREATE TABLE IF NOT EXISTS vaults (
                         id SERIAL PRIMARY KEY,
-                        type INT NOT NULL REFERENCES 
-                        name VARCHAR(35) NOT NULL,
-                        rarity VACHAR(20) CHECK (rarity IN (
-                            'comum', 'raro', 'epico', 'lendario'))
-                        description TEXT
+                        user_id INT NOT NULL REFERENCES users(id),
+                        items_id INT NOT NULL REFERENCES items(id),
+                        achieved_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
                     );
+                            
+                    CREATE TABLE IF NOT EXISTS bag (
+                        id SERIAL PRIMARY KEY,
+                        user_id INT NOT NULL REFERENCES users(id),
+                        items_id INT NOT NULL REFERENCES items(id),
+                        achieved_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                    );
+                            
 
                     INSERT INTO levels (name, required_score, order_number)
                     VALUES
@@ -138,10 +151,20 @@ def create_tables():
                         (4, 'task_07', 00, 7),
                         (4, 'task_08', 00, 8),
                         (4, 'task_09', 00, 9),
-                        (4, 'task_10', 00, 10)
+                        (4, 'task_10', 00, 10);
                         
-                        
-                """)
+                    INSERT INTO achievements (type, name, rarity, description)
+                    VALUES  
+                        ('objeto', 'Caneta do Reitor', 'lendario',
+                        'Caneta perdida pelo Reitor da UFS, vale mais do que você imagina');
+                    
+                            
+                    INSERT INTO items (category, name, rarity, amount_uses, description)
+                    VALUES  
+                        ('score', 'atestado médico', 'epico', 1,
+                        'Use para não perder pontos em uma task');
+               
+                 """)
 
 
             except (Exception, psycopg2.DatabaseError) as error:
@@ -158,7 +181,11 @@ def delete_tables():
                         user_levels,
                         tasks,
                         users,
-                        levels
+                        levels,
+                        items,
+                        achievements,
+                        vaults,
+                        bag
                     RESTART IDENTITY CASCADE;
                 """)
 
@@ -168,6 +195,6 @@ def delete_tables():
 
 
 if __name__ == "__main__":
-    # create_tables()
-    delete_tables()
+    create_tables()
+    # delete_tables()
     ...
