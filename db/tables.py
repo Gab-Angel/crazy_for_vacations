@@ -1,5 +1,4 @@
 # AS TABELAS QUE PRECISAM SER CRIADAS AUTOMATICAMENTE
-import psycopg2.extras
 from db.conn import connection
 
 
@@ -81,8 +80,20 @@ def create_tables():
                         items_id INT NOT NULL REFERENCES items(id),
                         achieved_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
                     );
-                            
+                                   
+                 """)
 
+
+            except (Exception, psycopg2.DatabaseError) as error:
+                print(error) 
+
+
+
+def insert_in_tables():
+    with connection() as conn:
+        with conn.cursor() as cur:
+            try:
+                cur.execute("""
                     INSERT INTO levels (name, required_score, order_number)
                     VALUES
                         ('calouro', 200, 1),
@@ -153,22 +164,21 @@ def create_tables():
                         (4, 'task_09', 00, 9),
                         (4, 'task_10', 00, 10);
                         
-                    INSERT INTO achievements (type, name, rarity, description)
-                    VALUES  
-                        ('objeto', 'Caneta do Reitor', 'lendario',
-                        'Caneta perdida pelo Reitor da UFS, vale mais do que você imagina');
                     
                             
-                    INSERT INTO items (category, name, rarity, amount_uses, description)
+                    INSERT INTO items (type, category, name, rarity, amount_uses, description)
                     VALUES  
-                        ('score', 'atestado médico', 'epico', 1,
-                        'Use para não perder pontos em uma task');
-               
-                 """)
+                        ('items', 'score', 'atestado médico', 'epico', 1,
+                        'Use para não perder pontos em uma task'),
+                        ('achievements', 'objeto', 'Caneta do Reitor', 'lendario', 1,
+                        'Caneta perdida pelo Reitor da UFS, vale mais do que você imagina');
+
+                """)
 
 
             except (Exception, psycopg2.DatabaseError) as error:
                 print(error) 
+
 
 
 def delete_tables():
@@ -183,7 +193,6 @@ def delete_tables():
                         users,
                         levels,
                         items,
-                        achievements,
                         vaults,
                         bag
                     RESTART IDENTITY CASCADE;
@@ -195,6 +204,7 @@ def delete_tables():
 
 
 if __name__ == "__main__":
-    create_tables()
+    # create_tables()
+    # insert_in_tables()
     # delete_tables()
     ...

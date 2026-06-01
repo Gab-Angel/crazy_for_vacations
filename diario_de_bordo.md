@@ -198,6 +198,14 @@ Jorge:
 - duas ramificações criadas ainda não testadas
  * numa delas vc chegou cedo e conseguiu ver aula da cálculo
  * na outra o usuario se perdeu e perdeu a aula de cálculo
- 
+  
+
+# 31/05
+
+Angel:
+- deletei a tabela de achievements pois não havia necessidade, tudo vai permancer em items e agora com um campo de type poderá ser definido o tipo de objeto.
+- função insert_in_tables para separar lógica de criação de tabelas da inserção
+
+
 # horas_trabalhadas: 
 48 horas
