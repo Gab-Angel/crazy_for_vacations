@@ -1,4 +1,5 @@
 # AS TABELAS QUE PRECISAM SER CRIADAS AUTOMATICAMENTE
+import psycopg2
 from db.conn import connection
 
 

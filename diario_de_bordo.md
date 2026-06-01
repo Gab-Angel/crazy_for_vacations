@@ -208,4 +208,4 @@ Angel:
 
 
 # horas_trabalhadas: 
-48 horas
+51 horas
