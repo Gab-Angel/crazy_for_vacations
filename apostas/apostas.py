@@ -1,6 +1,13 @@
 from crud.crud import pegar_dados, atualizar_score, atualizar_bets
-from utils import  digitar
+from db.crud import get_random_items, insert_item_bag, insert_item_vaults, update_user_bets, update_score
+from utils import digitar, get_data_session
 import random
+
+
+data = get_data_session()
+user_id = data['user_id']
+
+
 
 raridade = {
     'comum': 50,
@@ -12,23 +19,23 @@ raridade = {
 comuns = {
     'bets': [1, 2, 3, 4, 5, 10, 20],
     'score': [10, 20, 30, 40, 50, 100, 150, 200, 300],
-    'itens': ['comum1', 'comum2', 'comum3']
+    'items': [0]
 }
 
 raros = {
     'bets': [5, 7, 9, 10, 20, 50, 100],
     'score': [50, 60, 70, 80, 90, 100, 150, 200, 300],
-    'itens': ['raro1', 'raro2', 'raro3']
+    'items': [0]
 }
 epicos = {
     'bets': [5, 7, 9, 10, 20, 50, 100],
     'score': [50, 60, 70, 80, 90, 100, 150, 200, 300],
-    'itens': ['epico1', 'epico2', 'epico3']
+    'items': [0]
 }
 lendarios = {
     'bets': [5, 7, 9, 10, 20, 50, 100],
     'score': [50, 60, 70, 80, 90, 100, 150, 200, 300],
-    'itens': ['Caneta do Reitor', 'Senha da Secretaria', 'Nada']
+    'items': [0]
 }
 
 
@@ -135,9 +142,57 @@ def sobre():
 
 def premios_bets(categoria: str, premio):
     ...
-    
 
-def randomBets(bets: int):
+
+def ver_odds():
+    ...
+
+
+def mensagem_ganho(tipo_de_premio, tipo_e_premio: list) -> None:
+    if tipo_de_premio == 'achievements':
+        ...
+    elif tipo_de_premio == 'items':
+        ...
+    elif tipo_de_premio == 'bets':
+        ...
+    elif tipo_de_premio == 'score':
+        ...
+
+
+def girar():
+    quant_bets = int(input("Quantas bets você deseja jogar?: "))
+
+    # VERIFICAR SE TEM A QUANTIDADE DE BETS 
+
+    if ...:
+        ...
+
+
+    confirma = input(f"Confirma girar com {quant_bets} bets? s/n: ").lower().strip()
+
+    if confirma == 's':
+        # busca raridade randomicamente
+        raridade = sortear_raridade(quant_bets)
+
+        # pega tipo e premio que vem da lista de premios no topo do arquivo
+        tipo_e_premio = buscar_premio(raridade)
+
+        # o tipo de premio que foi salvo no bd
+        tipo_de_premio = guardar_premio(tipo_e_premio, raridade)
+
+        # mensagem que retorna ao user ao salvar o premio
+        mensagem_ganho(tipo_de_premio, tipo_e_premio)
+
+        
+
+    elif confirma == 'n':
+        ...
+    else:
+        digitar("Valor digitado inválido!")
+
+
+
+def sortear_raridade(bets: int) -> str:
     pesos = raridade.copy()
 
     luck = 1 + (bets / 100)
@@ -148,54 +203,94 @@ def randomBets(bets: int):
     result = random.choices(
         list(pesos.keys()),
         weights=list(pesos.values())
-    )
+    )[0]
 
-    if result == ['comum']:
-        categoria = random.choice(list(comuns))
-        lista = comuns[categoria]
-        premio = random.choice(lista)
-        premios_bets(categoria, premio)
-
-    elif result == ['raro']:
-        categoria = random.choice(list(raros))
-        lista = raros[categoria]
-        premio = random.choice(lista)
-        premios_bets(categoria, premio)
-
-    elif result == ['epico']:
-        categoria = random.choice(list(epicos))
-        lista = epicos[categoria]
-        premio = random.choice(lista)
-        premios_bets(categoria, premio)
-
-    elif result == ['lendario']:
-        categoria = random.choice(list(lendarios))
-        lista = lendarios[categoria]
-        premio = random.choice(lista)
-        premios_bets(categoria, premio)
-
-    return categoria, premio
+    return result
 
 
+def buscar_premio(raridade: str) -> list:
+    if raridade == 'comum':
+        tipo = random.choices(
+            list(comuns),
+            weights=[40, 35, 25]
+        )[0]
 
-def girar():
-    quant_bets = int(input("Quantas bets você deseja jogar?: "))
-    confirma = input(f"Confirma girar com {quant_bets} bets? s/n: ").lower().strip()
+        premio = random.choice(
+            list(comuns[tipo])
+        )
 
-    if confirma == 's':
-        ...
-
-    elif confirma == 'n':
-        ...
-    else:
-        digitar("Valor digitado inválido!")
+        return [tipo, premio]
 
 
+    elif raridade == 'raro':
+        tipo = random.choices(
+            list(raros),
+            weights=[40, 35, 25]
+        )[0]
     
+        premio = random.choice(
+            list(raros[tipo])
+        )
+
+        return [tipo, premio]
+
+    elif raridade == 'epico':
+        tipo = random.choices(
+            list(epicos),
+            weights=[40, 35, 25]
+        )[0]
+    
+        premio = random.choice(
+            list(epicos[tipo])
+        )
+
+        return [tipo, premio]
+
+    elif raridade == 'lendario':
+        tipo = random.choices(
+            list(lendarios),
+            weights=[40, 35, 25]
+        )[0]
+    
+        premio = random.choice(
+            list(lendarios[tipo])
+        )
+
+        return [tipo, premio]
 
 
-def ver_odds():
-    ...
+def guardar_premio(tipo_e_premio: list, raridade: str) -> str:
+    tipo = tipo_e_premio[0]
+    premio = tipo_e_premio[1]
+
+    if tipo == 'items':
+        item = get_random_items(raridade)
+
+        type = item['type']
+        items_id = item['id']
+
+        if type == 'achievements':
+            insert_item_vaults(user_id=user_id, items_id=items_id)
+
+            return 'achievements'
+        
+        elif type == 'items':
+            insert_item_bag(user_id=user_id, items_id=items_id)
+
+            return 'items'
+
+
+    elif tipo == 'bets':
+        update_user_bets(user_id,premio)
+
+        return 'bets'
+        
+    elif tipo == 'score':
+        update_score(user_id,premio)
+
+        return 'score'
+        
+
 
 
 def apostar():
@@ -218,17 +313,18 @@ def apostar():
         else:
             digitar('Digite uma das opções acima!!!')
 
-    
+
+
+
 
 if __name__ == "__main__":
-    # cont = 0
-    # while True:
-        
-    #     if randomBets(1) == ['lendario']:
-    #         break
-    #     else:
-    #         cont += 1
-    # print(cont)
 
-    premio = randomBets(1)
-    print(premio)
+
+    # item = get_random_items('lendario')
+    # id_item = item['id']
+
+    # insert_item_vaults(user_id=user_id, items_id=id_item)
+    # insert_item_bag(user_id=user_id, items_id=id_item)
+    apostar()
+
+

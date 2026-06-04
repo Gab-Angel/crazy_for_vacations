@@ -1,5 +1,10 @@
 import time
 from crud.crud import pegar_dados, atualizar_level
+from pathlib import Path
+import json
+
+file = Path('session.json')
+
 
 def digitar(texto, velocidade=0.01):
     for caractere in texto:
@@ -126,3 +131,15 @@ def verificar_score():
 
             
     return True
+
+
+
+def get_data_session():
+    with open(file, 'r') as f:
+        data = json.load(f)
+    
+    return data
+
+
+if __name__ == "__main__":
+    print(get_data_session())
