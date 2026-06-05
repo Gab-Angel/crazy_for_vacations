@@ -2,8 +2,8 @@ from crud.crud import atualizar_tasks, atualizar_score, atualizar_bets
 from utils import digitar
 import time
 from cores import colorired , colorirgreen
-from tasks.nivel_calourinho.nivel_calorinho import task_01, task_02
-from tasks.nivel_calourinho.lore_calourinho_alternativas import bperdido
+from tasks.nivel_calourinho.nivel_calorinho import task_01, task_02,task_05,task_06,task_07,task_08
+from tasks.nivel_calourinho.lore_calourinho_alternativas import bperdido, nãovoudia2
 
 print("\033[34m            / \\")
 print("\033[34m           /   \\")
@@ -126,3 +126,75 @@ digitar("professor chicharito:\n-nossa aula de hoje foi cancelada")
 digitar("happy happy\n ")
 time.sleep(2)
 digitar('primeiro dia concluido com sucesso')
+
+#========
+# DIA 2
+#========
+
+digitar("\n\n\n=="*15)
+digitar("SEGUNDO DIA DE AULA")
+digitar("=="*15)
+digitar("\n\nbom dia campeão(a) seu dia hoje promete!!")
+digitar("antes de tudo quero saber qual seu nível de entusiamos para as tasks diárias?? ")
+digitar("\na)muito empolgado\nb)bem empolgado\nc)medianamente entusiasmado\nd)legalzinho\ne)medio legal\nf)puco entusiasmado\ng)pouquissimo entusiasmado\nh)nada entusiasmado")
+resposta = input("sua resposta: ").upper()
+if resposta == "A":
+    print("vocÊ achou mesmo que eu teria respostas diferentes para cada uma das suas respostas???")
+    digitar("NINGUÉM LIGA PRO SEU ENTUSIASMO kkkkk")
+else:
+    print("vocÊ achou mesmo que eu teria respostas diferentes para cada uma das suas respostas???")
+    digitar("NINGUÉM LIGA PRO SEU ENTUSIASMO kkkkk")
+
+digitar("\n\n vamos voltar a seguir o roteiro\nvocÊ acorda com a mensagem do seu colega de classe...")
+digitar("________________")
+digitar("|mirosvaldo UFS|")
+digitar(" bom dia caro colega!\n vai para ufs hoje??\nparece que teremos uma palestra\nULTRAMENTE IMPORTANTE PARA O NOOOSSSO \nDESEVOLVIMENTO COMO DISCENTES")
+digitar("o que vc vai responder??\n opção a) vou nada zé\n opção b) comparecerei")
+resposta2 = input("sua resposta: ").upper()
+if resposta2 == "A":
+    nãovoudia2()
+else:
+    digitar("você escolheu ir para aula, muito bem!!")
+
+    digitar("\n\nvocê chegou na ufs e vai para sua aula de fundamentos da matemática\n\nlogo surgiram as primeiras questões")
+    digitar("pronto ou não lá vamos nós\n\n")
+    task_05()
+    task_06()
+    digitar("sua aula de fem terminou...\nvamos para a aula de vetores\n las't goo")
+    digitar("\n o que é formado pro uma ordenação de pares de pontos:\na)direção\nb)sentido\nc)segmento orientado\nd)módulo ")
+    while True:
+        resposta3 = input("sua resposta: ").upper()
+        if resposta3 == "C":
+            digitar(f"muito bem zequinha,continue assim !!!")
+                    atualizar_score("calourinho", 30)
+                    colorirgreen('parabéns + 30 pontos')
+                    break
+                else:
+                    digitar("não foi dessa fez meu peixe")
+                    digitar("tente novamente: ")        
+    digitar("\n\n o que é o módulo do vetor\na)comprimento\nb)área\nc)extremidade\nd)seguimento equipolente")
+    while True:
+        resposta4 = input("sua resposta: ").upper()
+        if resposta4 == "A":
+            digitar(f"muito bem zequinha,continue assim !!!")
+                    atualizar_score("calourinho", 30)
+                    colorirgreen('parabéns + 30 pontos')
+                    break
+                else:
+                    digitar("não foi dessa fez meu peixe")
+                    digitar("tente novamente: ")
+
+    digitar("\n\nagora decisão EXTREMAMENTE IMPORTANTE você vai ficar para a palestra??")
+    digitar('\na)sim\nb)não')
+    resposta5 = input("sua resposta: ").upper()
+    if resposta5 == "A":
+        digitar(" vocÊ asssistiu a palestra e foi interessante")
+        atualizar_score("calourinho", 10)
+        colorirgreen('parabéns + 10 pontos')
+    else:
+        digitar("está no seu direito!!!")
+    digitar("\n\nfinalmente seu expediente de estudos acabou...\n pode retornar para casa")
+    digitar("\ndia concluído com sucesso ")
+    digitar("=="*10)
+    colorirgreen("+105 conquistados no dia")
+    digitar("=="*10)

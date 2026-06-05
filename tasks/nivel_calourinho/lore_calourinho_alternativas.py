@@ -60,3 +60,11 @@ def bperdido():
         digitar("happy happy\n ")
         time.sleep(2)
         digitar('primeiro dia concluido com sucesso')
+
+
+def nãovoudia2():
+    digitar("você passou o dia inteiro dormindo e perdeu a oportunidade de ganhar pontos")
+    digitar("\ndia concluído com sucesso ")
+    digitar("=="*10)
+    colorired("105 perdidos no dia")
+    digitar("=="*10)
