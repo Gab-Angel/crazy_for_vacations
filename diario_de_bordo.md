@@ -207,5 +207,25 @@ Angel:
 - função insert_in_tables para separar lógica de criação de tabelas da inserção
 
 
+# 25/05 - 04/06
+Angel: 
+- crud:
+1. criada get_random_items
+2. criada insert_item_vaults
+3. criada insert_item_bags
+4. criada update_user_bets
+
+- apostas: 
+1. criada sortear_raridade 
+2. criada buscar_premio
+3. criada guardar_premio_bd
+4. função girar atualizada
+5. função randomBets deletada para trocar por um com lógica de bd
+
+- utils:
+1. criada get_data_session
+
+
+
 # horas_trabalhadas: 
-51 horas
+58 horas
