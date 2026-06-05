@@ -240,5 +240,10 @@ Angel:
 A fazer: 
 1. refazer completamente a função trocar_pontos 
 
+Jorge:
+- desenvolvi o dia 2 da lore
+- criei uma nova ramificação da lore principal
+- mais 115 pontos para quem cumprir o segundo dia com todas as ecolhas certas
+- Raiam Santos e matheus cunha!! 
 # horas_trabalhadas: 
 60 horas
