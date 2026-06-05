@@ -171,9 +171,20 @@ def insert_in_tables():
                     VALUES  
                         ('items', 'score', 'atestado médico', 'epico', 1,
                         'Use para não perder pontos em uma task'),
+                        ('items', 'score', 'teste1', 'comum', 1,
+                        'teste1'),
+                        ('items', 'score', 'teste2', 'raro', 1,
+                        'teste2'),
+                        ('items', 'score', 'teste3', 'lendario', 1,
+                        'teste3'),
                         ('achievements', 'objeto', 'Caneta do Reitor', 'lendario', 1,
-                        'Caneta perdida pelo Reitor da UFS, vale mais do que você imagina');
-
+                        'Caneta perdida pelo Reitor da UFS, vale mais do que você imagina'),
+                        ('achievements', 'score', 'teste4', 'comum', 1,
+                        'teste'),
+                        ('achievements', 'score', 'teste5', 'raro', 1,
+                        'teste'),
+                        ('achievements', 'score', 'teste6', 'epico', 1,
+                        'teste');
                 """)
 
 
@@ -207,5 +218,5 @@ def delete_tables():
 if __name__ == "__main__":
     # create_tables()
     # insert_in_tables()
-    # delete_tables()
+    delete_tables()
     ...

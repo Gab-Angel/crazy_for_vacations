@@ -225,7 +225,20 @@ Angel:
 - utils:
 1. criada get_data_session
 
+# 05/06
 
+Angel:
+- apostas:
+1. função girar melhorada 
+
+- crud:
+1. get_random_items agora separa items de achievements
+2. items de testes
+
+- crud antigo completamente deletado
+
+A fazer: 
+1. refazer completamente a função trocar_pontos 
 
 # horas_trabalhadas: 
-58 horas
+60 horas

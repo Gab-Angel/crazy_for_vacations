@@ -150,25 +150,54 @@ def update_user_bets(user_id: int, bets: int):
                 raise error
 
 
-def get_random_items(rarity):
+def get_random_items(rarity: str, type: str, user_id: str) -> dict | None:
     with connection() as conn:
         with conn.cursor() as cur:
             try:
-                cur.execute("""
-                    SELECT * FROM items
-                    WHERE rarity = %s
-                    ORDER BY RANDOM()
-                    LIMIT 1;
-                """,
-                (rarity,)            
-                )
-                
-                item = cur.fetchone()
+                if type == 'achievements':
+                    cur.execute("""
+                        SELECT *
+                        FROM items i
+                        WHERE NOT EXISTS (
+                            SELECT 1
+                            FROM vaults v
+                            WHERE v.user_id = %s
+                            AND v.items_id = i.id
+                        )
+                        AND i.rarity = %s
+                        AND i."type" = 'achievements'
+                        ORDER BY RANDOM()
+                        LIMIT 1;
+                    """,
+                    (user_id, rarity)            
+                    )
+                    print('BATEU AQUIIIII VUUU')
+                    item = cur.fetchone()
 
-                if item is None:
-                    raise ValueError(f"Item not found.")
+                    if item is None:
+                        return None
+                    else:
+                        return item
 
-                return item
+
+                elif type == 'items':
+                    cur.execute("""
+                        SELECT * FROM items
+                        WHERE rarity = %s
+                        AND type = 'items'
+                        ORDER BY RANDOM()
+                        LIMIT 1;
+                    """,
+                    (rarity,)            
+                    )
+
+                    item = cur.fetchone()
+
+
+                    if item is None:
+                        raise ValueError(f"Item not found.")
+
+                    return item
 
             except (Exception, psycopg2.DatabaseError) as error:
                 conn.rollback()
