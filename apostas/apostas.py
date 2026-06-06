@@ -7,8 +7,8 @@ from db.crud import (
     get_data_user
 )
 from utils import digitar, get_data_session
-import random
 from cores import colorired, coloriryellow
+import random
 
 data = get_data_session()
 user_id = data['user_id']
@@ -49,10 +49,9 @@ lendarios = {
 
 
 def trocar_pontos():
-    dados = pegar_dados()
+    dados = get_data_user(user_id)
     bets = dados['bets']
-    nivel = dados['level']
-    score = dados['score'][nivel]
+    score = dados['total_score']
 
     digitar(f"""
     Você tem {score} pontos para transfomar em bets
@@ -78,33 +77,33 @@ def trocar_pontos():
         troca = int(input('Quantos jogadas você quer adquirir: '))
 
         if troca == 1:
-            atualizar_score(nivel, -25)
-            atualizar_bets(1)
+            update_score(user_id, -25)
+            update_user_bets(user_id,1)
             digitar(f'Você acabou de trocar 25 pontos em {troca} jogada')
             
         elif troca == 2:
-            atualizar_score(nivel, -50)
-            atualizar_bets(2)
+            update_score(user_id, -50)
+            update_user_bets(user_id, 2)
             digitar(f'Você acabou de trocar 50 pontos em {troca} jogadas')
 
         elif troca == 5: 
-            atualizar_score(nivel, -100)
-            atualizar_bets(5)
+            update_score(user_id, -100)
+            update_user_bets(user_id, 5)
             digitar(f'Você acabou de trocar 100 pontos em {troca} jogadas')
 
         elif troca == 10:
-            atualizar_score(nivel, -150)
-            atualizar_bets(10)
+            update_score(user_id, -150)
+            update_user_bets(user_id, 10)
             digitar(f'Você acabou de trocar 150 pontos em {troca} jogadas')
 
         elif troca == 15:
-            atualizar_score(nivel, -200)
-            atualizar_bets(15)
+            update_score(user_id, -200)
+            update_user_bets(user_id, 15)
             digitar(f'Você acabou de trocar 200 pontos em {troca} jogadas')
 
         elif troca == 20:
-            atualizar_score(nivel, -300)
-            atualizar_bets(20)
+            update_score(user_id, -300)
+            update_user_bets(user_id, 20)
             digitar(f'Você acabou de trocar 300 pontos em {troca} jogadas')
 
         else:
@@ -120,7 +119,6 @@ def trocar_pontos():
             ...
         else:
             break 
-
 
 
 def sobre():
@@ -147,14 +145,6 @@ def sobre():
     {'='*100}
 
 """)
-
-
-def premios_bets(categoria: str, premio):
-    ...
-
-
-def ver_odds():
-    ...
 
 
 def mensagem_ganho(item: dict) -> None:
@@ -225,7 +215,7 @@ def girar():
         return
 
 
-    if quant_bets > bets:
+    if quant_bets > bets or bets == 0:
         colorired(f'\nVocê não tem bets suficientes para essa jogada!\nAdquira mais ou diminua sua aposta.')
         return
 
@@ -267,7 +257,6 @@ def girar():
         return
     else:
         digitar("Valor digitado inválido!")
-
 
 
 def sortear_raridade(bets: int) -> str:
@@ -389,24 +378,19 @@ def guardar_premio_bd(tipo_e_premio: list, raridade: str) -> dict | None:
             }
         
 
-
-
 def apostar():
     while True: 
         digitar('''
     1 - Girar
-    2 - Ver odds
-    3 - Sair
+    2 - Sair
 
 ''')
-        
+  
         choice = input('O que você deseja: ')
 
         if choice == '1':
             girar()
         elif choice == '2':
-            ver_odds()
-        elif choice == 'sair':
             break
         else:
             digitar('Digite uma das opções acima!!!')
@@ -416,32 +400,22 @@ def apostar():
 
 
 if __name__ == "__main__":
+    apostar()
 
+    # for _ in range(20):
 
-    # item = get_random_items('lendario')
-    # id_item = item['id']
+    #     raridad = sortear_raridade(1)
 
-    # insert_item_vaults(user_id=user_id, items_id=id_item)
-    # insert_item_bag(user_id=user_id, items_id=id_item)
-    # apostar()
+    #     # pega tipo e premio que vem da lista de premios no topo do arquivo
+    #     tipo_e_premio = buscar_premio(raridad)
 
-# ALTERAR PESOS
-# LOOP DE TESTES
+    #     # o tipo de premio que foi salvo no bd
+    #     result = guardar_premio_bd(tipo_e_premio, raridad)
+    #     if result is None:
+    #         continue
 
-    for _ in range(20):
+    #     # mensagem que retorna ao user ao salvar o premio
+    #     mensagem_ganho(result)
 
-        raridad = sortear_raridade(1)
-
-        # pega tipo e premio que vem da lista de premios no topo do arquivo
-        tipo_e_premio = buscar_premio(raridad)
-
-        # o tipo de premio que foi salvo no bd
-        result = guardar_premio_bd(tipo_e_premio, raridad)
-        if result is None:
-            continue
-
-        # mensagem que retorna ao user ao salvar o premio
-        mensagem_ganho(result)
-
-        # atualiza o bd debitando as bets
-        update_user_bets(user_id, -1)
+    #     # atualiza o bd debitando as bets
+    #     update_user_bets(user_id, -1)
